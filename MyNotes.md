@@ -1,11 +1,10 @@
 # Python Note Taking:
 
-
-## Rotate Image Different Solutions:
-[Link](https://leetcode.com/discuss/38426/seven-short-solutions-1-to-7-lines)
-
 ```python
-class Solution:
-    def rotate(self, A):
-        A[:] = zip(*A[::-1])
+#zip example
+>>> x = [1, 2, 3]
+>>> y = [4, 5, 6]
+>>> zipped = zip(x, y)
+>>> zipped
+[(1, 4), (2, 5), (3, 6)]
 ```
