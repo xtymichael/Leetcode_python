@@ -22,10 +22,11 @@ class Solution:
         cur = head
 
         for i range(0, length/k * k, k):
-        	number = n
+        	number = k
         	while number > 0:
+        		
         		if number == n:
-        			
+
         		temp = cur.next
         		temp.next = cur
 
