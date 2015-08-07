@@ -4,8 +4,7 @@ class Solution:
     def rotate(self, matrix):
         dim = len(matrix)
         copy = [x[:] for x in matrix] ### copy = matrix is wrong since they point to the same thing
-        if dim > 1:
-	        for i in range(dim):
-	        	for j in range(dim):
-	        		matrix[i][j] = copy[dim - j - 1][i]
+        for i in range(dim):
+        	for j in range(dim):
+        		matrix[i][j] = copy[~j][i]
 
