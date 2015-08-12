@@ -3,13 +3,16 @@ class Solution:
 # @param {integer} k
 # @return {void} Do not return anything, modify nums in-place instead.
 	def rotate(self, nums, k):
-		if k == 1:
-			self.swap(nums[0],nums[-1])
-		elif k != 0:
-			for i in range(len(nums) / k):
-				for j in range(k):
-					self.swap(nums[i*k +j], nums[-k + j])
-	def swap(self, a, b):
-		temp = a
-		a = b
-		b = temp
+		k = k % len(nums)
+		nums[:] = nums[-k:] + nums[:-k] 
+
+
+
+
+################   Solution 2   ################
+#####  USING POP & INSERT ######################
+class Solution:
+    def rotate(self, nums, k):
+        while k > 0:
+            nums.insert(0, nums.pop())
+            k -= 1
