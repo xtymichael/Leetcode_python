@@ -3,26 +3,21 @@ class Solution:
     # @param {integer} target
     # @return {integer}
     def threeSumClosest(self, nums, target):
-        if len(nums) < 3:
-            return None
-        if len(nums) == 3:
-            return sum(nums)
-
         nums = sorted(nums)
-        dlist = []
+        result = nums[0] + nums[1] + nums[2]
         for i in range(len(nums) - 2):
-            j = i + 1
-            k = len(nums) - 1
-            while j < k:
+            j, k = i+1, len(nums) - 1
+            while  j < k:
                 total = nums[i] + nums[j] + nums[k]
-                diff = total - target
                 if total == target:
-                    return total
+                    return target
+                if abs(total - target) < abs(result - target):
+                    result = total
 
-                if not dlist:
-                    dlist.append(diff)
-                elif abs(dlist[0]) > abs(diff):
-                    dlist[0] = diff
-                if j == k - 1 and 
-                j += 1
-        return dlist[0] + target
+                if total < target:
+                    j += 1
+
+                elif total > target:
+                    k -= 1
+
+        return result
