@@ -26,3 +26,15 @@ class Solution:
     		return temp[len(temp)/2]
     	else:
     		return (temp[len(temp)/2] + temp[len(temp)/2 - 1]) / 2.0
+
+
+
+
+
+################# LOG(N) BINARY SEARCH ###################
+class Solution:
+    # @param {integer[]} nums1
+    # @param {integer[]} nums2
+    # @return {float}
+    def findMedianSortedArrays(self, nums1, nums2):
+
