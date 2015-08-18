@@ -42,4 +42,9 @@ maxInt = 2 ** 31 -1
 minInt = -2 ** 31
 ```
 
+```python
+d = dict()
+d.pop(somekey, None) #remove key from dict
 
+d.keys() # [key1, key2, ...] all keys of a dict
+```
