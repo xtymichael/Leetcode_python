@@ -7,3 +7,5 @@ class Solution:
         if len(sum) < 4 or sum(nums[:4]) > target or sum(nums[-4:]) < target:
             return []
 
+
+        

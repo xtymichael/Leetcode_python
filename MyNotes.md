@@ -48,3 +48,10 @@ d.pop(somekey, None) #remove key from dict
 
 d.keys() # [key1, key2, ...] all keys of a dict
 ```
+
+```python
+(set(range(11)) - set(range(10))).pop()
+
+>> 10
+[More about sets](https://docs.python.org/2/library/sets.html)
+```
