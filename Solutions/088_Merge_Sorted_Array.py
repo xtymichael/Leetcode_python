@@ -1,23 +1,19 @@
-class Solution:
-    # @param {integer[]} nums1
-    # @param {integer} m
-    # @param {integer[]} nums2
-    # @param {integer} n
-    # @return {void} Do not return anything, modify nums1 in-place instead.
+class Solution(object):
     def merge(self, nums1, m, nums2, n):
-        p, q, i = m - 1, n - 1, m + n - 1
-        while q >= 0:
-            if p < 0 or nums2[q] >= nums1[p]
-                i -= 1
-                q -= 1
-                nums1[i] = nums2[q]
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: void Do not return anything, modify nums1 in-place instead.
+        """
+        i, j, k = m - 1, n - 1, m + n - 1
+        while j >= 0:
+            if i < 0 or nums2[j] >= nums1[i]:
+                nums1[k] = nums2[j]
+                j -= 1
+                k -= 1
             else:
+                nums1[k] = nums1[i]
+                k -= 1
                 i -= 1
-                p -= 1
-                nums1[i] = num1[p]
-            
-
-
-
-
-

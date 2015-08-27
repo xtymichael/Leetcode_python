@@ -55,3 +55,21 @@ d.keys() # [key1, key2, ...] all keys of a dict
 >> 10
 [More about sets](https://docs.python.org/2/library/sets.html)
 ```
+
+
+```python
+num = ['99', '200','93']
+num.sort(lambda x, y: cmp(y+x, x+y))
+
+>> num = ['99', '93', '200']
+>> ''.join(num).lstrip('0') or '0'
+# join ---->  9993200
+# lstrip ----> get rid of all 00000 prefix  (avoid ['0', '0'])
+# or '0'  -----> '' or '0' = '0'
+```
+
+```python
+>>> mylist = ['a', 'b', 'c', 'd']
+>>> [item for item in enumerate(mylist)]
+[(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd')]
+```
