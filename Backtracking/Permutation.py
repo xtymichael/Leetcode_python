@@ -9,11 +9,11 @@ def swap(a, i, j):
 
 def permute(a, i, n):
     if i == n:
-        print a
+        return a
     else:
         for j in range(i, n+1):
             swap(a, i, j)
-            permute(a, i+1, n)
+            [a].append(permute(a, i+1, n))
             swap(a, i, j)  # backtrack
 
-permute(list('ABC'), 0, 2)
+print permute(list('ABC'), 0, 2)
