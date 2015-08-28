@@ -53,8 +53,8 @@ d.keys() # [key1, key2, ...] all keys of a dict
 (set(range(11)) - set(range(10))).pop()
 
 >> 10
-[More about sets](https://docs.python.org/2/library/sets.html)
 ```
+[More about sets](https://docs.python.org/2/library/sets.html)
 
 
 ```python
@@ -73,3 +73,22 @@ num.sort(lambda x, y: cmp(y+x, x+y))
 >>> [item for item in enumerate(mylist)]
 [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd')]
 ```
+
+### Stacks & Queue
+Stacks: LIFO: Last in, first out
+Queue: FIFO: First in, first out
+### Stacks
+Push: add item to top of the stacks 
+Pop: remove item from top of the stacks
+peek: return top item without removing
+### Queue
+enqueue:add item to the back of the queue
+dequeue:remove item from front of the queue
+peek: return front item
+### Linked List
+next prev
+singly linked — omit the prev
+insert in the head
+### Binary Search Tree
+left sub smaller or eq
+right sub bigger
