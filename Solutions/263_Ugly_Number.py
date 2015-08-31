@@ -16,3 +16,11 @@ class Solution(object):
         	return self.isUgly(num / 2)
         return False
         
+
+###################### Solution 2##################
+class Solution(object):
+    def isUgly(self, num):
+        for p in 2, 3, 5:      ### gettinr rid of all 2s, then all 3s, then all 5s
+            while num % p == 0 < num: 
+                num /= p
+        return num == 1

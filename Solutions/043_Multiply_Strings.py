@@ -1,11 +1,12 @@
 class Solution(object):
     def multiply(self, num1, num2):
-        """
-        :type num1: str
-        :type num2: str
-        :rtype: str
-        """
-        result = 0
-        for i in range(len(num1)):
-        	result += int(num1[i]) * int(num2) * (10 ** (len(num1)- i - 1))
-        return str(result)
+            res = [0]* (len(num1) + len(num2))
+            for i, e1 in enumerate(reversed(num1)):
+                for j, e2 in enumerate(reversed(num2)):
+                    res[i+j] += int(e1) * int(e2)
+                    res[i+j+1] += res[i+j]/10
+                    res[i+j] %= 10
+
+            while len(res) > 1 and res[-1] == 0: res.pop()
+            return ''.join( map(str,res[::-1]) )
+            
