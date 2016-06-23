@@ -21,12 +21,11 @@ class Solution:
         dummy.next = head
         cur = head
 
-        for i range(0, length/k * k, k):
+        for i in range(0, length/k * k, k):
         	number = k
         	while number > 0:
-        		
+
         		if number == n:
 
         		temp = cur.next
         		temp.next = cur
-

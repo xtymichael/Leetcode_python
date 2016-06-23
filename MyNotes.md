@@ -14,7 +14,7 @@ True
 
 
 ```python
-#map example
+#map example Pi
 result = map(lambda x: x * x, [1, 2, 3])
 reuslt = [1, 4, 9]
 
@@ -74,11 +74,21 @@ num.sort(lambda x, y: cmp(y+x, x+y))
 [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd')]
 ```
 
+```python
+import collections
+a = [1,2,3,4,5,5,5]
+c = collections.Counter(a)
+print c
+print c[5]
+>>>Counter({5: 3, 1: 1, 2: 1, 3: 1, 4: 1})
+>>>3
+```
+
 ### Stacks & Queue
 Stacks: LIFO: Last in, first out
 Queue: FIFO: First in, first out
 ### Stacks
-Push: add item to top of the stacks 
+Push: add item to top of the stacks
 Pop: remove item from top of the stacks
 peek: return top item without removing
 ### Queue
