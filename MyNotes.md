@@ -12,6 +12,30 @@
 True
 ```
 
+```python
+a =  [1, 2, 3, 4]
+b = a[:]
+b[2] = 100
+print a
+print b
+>>>[1, 2, 3, 4]
+>>>[1, 2, 100, 4]
+```
+
+```python
+#copy 1D array by value
+b = a[:]
+#copy 2D array by value
+b = [c[:] for c in a]
+```
+
+```python
+a = [[1,2,0],[4,5,6]]
+print len(a)
+print len(a[0])
+>>> 2
+>>> 3
+```
 
 ```python
 #map example Pi
@@ -45,8 +69,9 @@ minInt = -2 ** 31
 ```python
 d = dict()
 d.pop(somekey, None) #remove key from dict
-
+len(d)
 d.keys() # [key1, key2, ...] all keys of a dict
+d.values() #[value1, value2....] all values of a dict
 ```
 
 ```python
