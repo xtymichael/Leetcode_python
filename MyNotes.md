@@ -13,13 +13,13 @@ True
 ```
 
 ```python
-a =  [1, 2, 3, 4]
-b = a[:]
-b[2] = 100
-print a
+a = [(1,2,3),(8,9,7),(199,88,10)]
+
+b = [n for nd in a for n in nd] # for nd in a (tuples)
+                                # for n in nd (everything in each tuples)
 print b
->>>[1, 2, 3, 4]
->>>[1, 2, 100, 4]
+>>>[1,2,3,8,9,7,199,88,10]
+
 ```
 
 ```python
@@ -127,3 +127,5 @@ insert in the head
 ### Binary Search Tree
 left sub smaller or eq
 right sub bigger
+http://www.code123.cc/docs/leetcode-notes/basics_data_structure/binary_tree.html
+
